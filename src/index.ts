@@ -1,6 +1,18 @@
-import {add} from '@/test/math'
-const a = 5;
+import express from 'express';
+const app = express();
+const port = process.env.PORT || 8989;
 
-const b = 100;
 
-console.log("this is the final result of the algorithm",add(a,b));
+app.get('/', (req, res) => {
+    res.send('<h1>Hello World from Gaurav!<h1>');
+});
+app.get('/login', (req, res) => {
+    res.send('<h2>you  can do the login here<h2>');
+});
+app.listen(port, () => {
+
+    console.log(`listening on port  http://localhost:${port}`);
+    
+
+
+})
